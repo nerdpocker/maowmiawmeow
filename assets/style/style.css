@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
-body {
-  background-color: rgb(36, 36, 36);
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
 * {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
-
+  box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(36, 36, 36);
+}
+
+/* WAKTU */
 #waktu h1 {
   font-family: "Fredoka";
-  font-weight: 20;
+  font-weight: 400;
   font-size: 70px;
   color: white;
 }
@@ -25,22 +27,57 @@ body {
   font-size: 20px;
 }
 
+/* BACKGROUND 1 */
 .background1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/bg1.jpg');
-  box-sizing: border-box;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url('../img/bg1.jpg');
+
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* BACKGROUND 2 */
 .background2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/assets/img/bg2.jpg');
   background-color: rgb(20, 20, 20);
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url('../img/bg2.jpg'),
+    url('../img/bg2.jpg');
+
+  /*
+    Layer 1: Gradient
+    Layer 2: Foto utuh agar tulisan tidak terpotong
+    Layer 3: Foto blur/cover untuk mengisi layar
+  */
+
+  background-size:
+    cover,
+    contain,
+    cover;
+
+  background-position:
+    center,
+    center,
+    center;
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
   box-sizing: border-box;
-  /* gradient tetap cover, foto pakai contain biar tidak kepotong */
-  background-size: cover, contain;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
 }
 
+/* ANIMASI MUNCUL */
 .muncul {
   animation: muncul 1200ms ease;
 }
@@ -49,37 +86,50 @@ body {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
+/* BODY UTAMA */
 .body {
   background-color: rgb(133, 133, 133);
   margin: 0 auto;
   text-align: center;
   justify-content: center;
+
   height: 100vh;
+
   z-index: -999;
+
   overflow-x: hidden;
   overflow-y: auto;
+
   box-sizing: border-box;
   padding-bottom: 12rem;
 }
 
+/* WAKTU */
 #waktu {
   margin: 7rem 1rem 0;
 }
 
+/* MESSAGE BOX */
 .messege-box {
   text-align: left;
-  background-color: rgb(233, 233, 233, 0.9);
+  background-color: rgba(233, 233, 233, 0.9);
+
   border-radius: 1rem;
   margin: 2rem 1rem;
   padding: 15px;
+
   line-height: 1.5rem;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.801);
+
   cursor: pointer;
+
   transform: translateX(-100vw);
   transition: 500ms all ease;
 }
@@ -90,13 +140,14 @@ body {
   margin: 0.6rem 1rem;
 }
 
-/* disembunyikan dulu, ditampilkan lewat JS */
+/* PESAN TERSEMBUNYI */
 .messege-box2,
 .messege-box3,
 .messege-box4 {
   display: none;
 }
 
+/* CONTENT */
 .content {
   margin-top: 0.5rem;
 }
@@ -109,6 +160,7 @@ body {
   font-size: 15px;
 }
 
+/* BUTTON */
 #button {
   position: absolute;
   bottom: 7rem;
@@ -119,21 +171,27 @@ body {
 #button button {
   font-size: 20px;
   font-family: 'Fredoka';
+
   border-style: none;
   border-radius: 0.5rem;
+
   padding: 5px 15px;
 }
 
-#button button.hilang2{
+#button button.hilang2 {
   font-size: 20px;
-  color:white;
+  color: white;
   background: rgb(19, 138, 54);
+
   font-family: 'Fredoka';
+
   border-style: none;
   border-radius: 0.5rem;
+
   padding: 5px 15px;
 }
 
+/* ANIMASI GOYANG */
 .goyang {
   animation: goyang 1200ms infinite ease;
 }
@@ -148,10 +206,11 @@ body {
   }
 
   100% {
-    transform: translateY(10);
+    transform: translateY(10px);
   }
 }
 
+/* ANIMASI KELIP */
 .kelip {
   animation: kelip 1200ms infinite ease;
 }
@@ -170,9 +229,11 @@ body {
   }
 }
 
+/* NOTIFICATION */
 .notif-wa {
   box-sizing: border-box;
   background-size: cover;
+
   display: flex;
   align-items: center;
 }
@@ -180,6 +241,7 @@ body {
 .left-header {
   display: flex;
   flex: 1;
+
   text-align: center;
   align-items: center;
 }
@@ -191,15 +253,17 @@ body {
 
 .notif-wa img {
   width: 25px;
-  box-sizing: border-box;
   height: auto;
+  box-sizing: border-box;
   background-size: cover;
 }
 
+/* HILANG */
 .hilang {
   display: none;
 }
 
+/* RESPONSIVE */
 @media screen and (min-width: 600px) {
   .body {
     width: 470px;
