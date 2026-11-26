@@ -32,9 +32,13 @@ body {
 }
 
 .background2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/bg2.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/assets/img/bg2.jpg');
+  background-color: rgb(20, 20, 20);
   box-sizing: border-box;
-  background-size: cover;
+  /* gradient tetap cover, foto pakai contain biar tidak kepotong */
+  background-size: cover, contain;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .muncul {
@@ -57,7 +61,10 @@ body {
   justify-content: center;
   height: 100vh;
   z-index: -999;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-bottom: 12rem;
 }
 
 #waktu {
@@ -75,6 +82,19 @@ body {
   cursor: pointer;
   transform: translateX(-100vw);
   transition: 500ms all ease;
+}
+
+.messege-box1,
+.messege-box3,
+.messege-box4 {
+  margin: 0.6rem 1rem;
+}
+
+/* disembunyikan dulu, ditampilkan lewat JS */
+.messege-box2,
+.messege-box3,
+.messege-box4 {
+  display: none;
 }
 
 .content {
