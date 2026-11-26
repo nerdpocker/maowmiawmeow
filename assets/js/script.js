@@ -81,13 +81,6 @@ hilang1.addEventListener('click', () => {
   const speed = 50
 
   // ================================
-  // PESAN YANG AKAN DIKETIK
-  // ================================
-
-  const txt = `Halo sayang. ${pesan}`
-
-
-  // ================================
   // TYPEWRITER
   // ================================
 
