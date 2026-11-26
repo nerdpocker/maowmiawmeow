@@ -36,7 +36,7 @@ jam.innerHTML = `${hour}:${minutes}`
 
 const pengirim = "princess kayasha"
 
-const pesan = `nopal sorry ya yg kemarin,maaf selalu bikin lu badmood dan selalu ngulangin. gua tau lu udah bilang aman tapi gua ngerasa bersalah banget ,gua mungkin ga selalu bisa express my feelings properly n sometimes i tease u a lil too much but i hope u know tht i genuinely care abt u,thank u nopal for always making me feel so loved,makasih selalu dengerin cerita sm masalah" gua even when u had ur own,thank u for always make time for me :) i might not say it often but i deeply appreciate everything you do for me. you matter so muuuchh more than you think u do, n sorry i haven't always been the best at showing it😅`
+const pesan = `nopal sorry ya yg kemarin,maaf selalu bikin lu badmood dan selalu ngulangin. gua tau lu udah bilang aman tapi gua ngerasa bersalah banget,gua mungkin ga selalu bisa express my feelings properly n sometimes i tease u a lil too much but i hope u know tht i genuinely care abt u,thank u nopal for always making me feel so loved,makasih selalu dengerin cerita sm masalah" gua even when u had ur own,thank u for always make time for me :) i might not say it often but i deeply appreciate everything you do for me. you matter so muuuchh more than you think u do, n sorry i haven't always been the best at showing it😅`
 
 
 semuaNama.forEach((el) => {
