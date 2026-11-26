@@ -39,7 +39,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-sizing: border-box;
 }
 
 /* BACKGROUND 2 */
@@ -54,6 +53,12 @@ body {
     url('../img/bg2.jpg'),
     url('../img/bg2.jpg');
 
+  /*
+    Layer 1: Gradient
+    Layer 2: Foto utuh agar tulisan tidak terpotong
+    Layer 3: Foto blur/cover untuk mengisi layar
+  */
+
   background-size:
     cover,
     contain,
@@ -61,7 +66,7 @@ body {
 
   background-position:
     center,
-    54% center,
+    center,
     center;
 
   background-repeat:
@@ -93,10 +98,14 @@ body {
   margin: 0 auto;
   text-align: center;
   justify-content: center;
+
   height: 100vh;
+
   z-index: -999;
+
   overflow-x: hidden;
   overflow-y: auto;
+
   box-sizing: border-box;
   padding-bottom: 12rem;
 }
@@ -110,12 +119,17 @@ body {
 .messege-box {
   text-align: left;
   background-color: rgba(233, 233, 233, 0.9);
+
   border-radius: 1rem;
   margin: 2rem 1rem;
   padding: 15px;
+
   line-height: 1.5rem;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.801);
+
   cursor: pointer;
+
   transform: translateX(-100vw);
   transition: 500ms all ease;
 }
@@ -157,8 +171,10 @@ body {
 #button button {
   font-size: 20px;
   font-family: 'Fredoka';
+
   border-style: none;
   border-radius: 0.5rem;
+
   padding: 5px 15px;
 }
 
@@ -166,9 +182,12 @@ body {
   font-size: 20px;
   color: white;
   background: rgb(19, 138, 54);
+
   font-family: 'Fredoka';
+
   border-style: none;
   border-radius: 0.5rem;
+
   padding: 5px 15px;
 }
 
@@ -214,6 +233,7 @@ body {
 .notif-wa {
   box-sizing: border-box;
   background-size: cover;
+
   display: flex;
   align-items: center;
 }
@@ -221,6 +241,7 @@ body {
 .left-header {
   display: flex;
   flex: 1;
+
   text-align: center;
   align-items: center;
 }
